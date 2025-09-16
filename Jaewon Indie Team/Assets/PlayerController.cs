@@ -1,14 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f;
+    public float runSpeed = 5f;
+    public float walkSpeed = 5f;
 
     public float jumpPower = 5f;
 
     public float gravity = -9.81f;
+
+    public CinemachineVirtualCamera virtualCam;
+
+    public float rotationSpeed = 10;
+
+    private CinemachinePOV pov;
 
     private CharacterController controller;
 
@@ -16,22 +22,62 @@ public class PlayerController : MonoBehaviour
 
     public bool isGrounded;
 
+    public CinemacineSwitcher cS;
+
+    public bool isRunning;
+
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        pov = virtualCam.GetCinemachineComponent<CinemachinePOV>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        isRunning = Input.GetKey(KeyCode.LeftShift);
+        float currentSpeed = isRunning ? runSpeed : walkSpeed;
+
         isGrounded = controller.isGrounded;
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            virtualCam.m_Lens.FieldOfView = 80f;
+            Debug.Log("LeftShift");
+        }
+        else
+        {
+            virtualCam.m_Lens.FieldOfView = 60f;
+        }
+
+        isGrounded = controller.isGrounded;
+        
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = new Vector3(x, 0, z);
-        controller.Move(move * speed * Time.deltaTime);
+        Vector3 camForward = virtualCam.transform.forward;
+        camForward.y = 0;
+        camForward.Normalize();
+
+        Vector3 camRight = virtualCam.transform.right;
+        camRight.y = 0;
+        camRight.Normalize();
+
+        Vector3 move = (camForward * z + camRight * x).normalized;
+        if(!cS.usingFreeLook)
+        controller.Move(move * currentSpeed * Time.deltaTime);
+
+        float cameraYaw = pov.m_HorizontalAxis.Value;
+        Quaternion targetRot = Quaternion.Euler(0f, cameraYaw, 0f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotationSpeed * Time.deltaTime);
 
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
@@ -39,5 +85,13 @@ public class PlayerController : MonoBehaviour
         }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+        
+       
+
     }
+
+   
+
+   
 }
