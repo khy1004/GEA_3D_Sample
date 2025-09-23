@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float runSpeed = 5f;
+    
     public float walkSpeed = 5f;
 
     public float jumpPower = 5f;
