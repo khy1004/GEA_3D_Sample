@@ -1,5 +1,6 @@
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -27,6 +28,12 @@ public class PlayerController : MonoBehaviour
 
     public bool isRunning;
 
+    public int maxHP = 100;
+
+    private int currentHP;
+
+    public Slider hpSlider;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,11 +41,34 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         pov = virtualCam.GetCinemachineComponent<CinemachinePOV>();
 
+
+        currentHP = maxHP;
+        hpSlider.value = 1f;
+    }
+    public void TakeDamage(int damage)
+    {
+        currentHP -= damage;
+        hpSlider.value = (float)currentHP / maxHP;
+
+        if (currentHP <= 0)
+        {
+            Die();
+        }
     }
 
+    void Die()
+    {
+        Destroy(gameObject);
+    }
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            pov.m_HorizontalAxis.Value = transform.eulerAngles.y;
+            pov.m_VerticalAxis.Value = 0f;
+
+        }
 
         isRunning = Input.GetKey(KeyCode.LeftShift);
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
