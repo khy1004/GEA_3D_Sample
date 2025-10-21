@@ -1,21 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelObject : MonoBehaviour
 {
-    // Start is called before the first frame update
     public string nextLevel;
-    public void MoveToNextLeve()
+    public void MoveToNextLevel()
     {
-        GameDataManager.Instance.SaveData();
-        SceneManager.LoadScene(nextLevel);   
+        if (GameDataManager.Instance != null)
+        {
+            GameDataManager.Instance.SaveData();
+        }
+        else
+        {
+            Debug.LogError("데이터매니저 인스턴스 없음");
+        }
+        SceneManager.LoadScene(nextLevel);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            MoveToNextLevel();
+        }
     }
 }

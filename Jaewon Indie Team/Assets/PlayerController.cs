@@ -1,5 +1,6 @@
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -34,6 +35,10 @@ public class PlayerController : MonoBehaviour
 
     public Slider hpSlider;
 
+   
+
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +49,7 @@ public class PlayerController : MonoBehaviour
 
         currentHP = maxHP;
         hpSlider.value = 1f;
+       
     }
     public void TakeDamage(int damage)
     {
@@ -56,6 +62,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    
+  
     void Die()
     {
         Destroy(gameObject);
@@ -122,7 +130,9 @@ public class PlayerController : MonoBehaviour
 
     }
 
-   
 
-   
+    
+
+
+
 }
