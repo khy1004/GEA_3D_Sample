@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
   
     void Die()
     {
-        Destroy(gameObject);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     // Update is called once per frame
     void Update()
@@ -124,6 +124,8 @@ public class PlayerController : MonoBehaviour
         }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+
 
         
        
