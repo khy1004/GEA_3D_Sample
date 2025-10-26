@@ -193,8 +193,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142317571}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2032908, y: 0.7542076, z: -0.27306086, w: 0.56149936}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.24071698, y: 0.66487247, z: -0.24071698, w: 0.66487247}
+  m_LocalPosition: {x: 0.000000008692174, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -399,8 +399,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173688322}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1930438, y: 0.7590497, z: -0.259297, w: 0.5651042}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.22858347, y: 0.66914093, z: -0.22858347, w: 0.66914093}
+  m_LocalPosition: {x: 0.000000008692174, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -594,8 +594,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299147782}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18276021, y: 0.7636288, z: -0.24548407, w: 0.5685133}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.21640669, y: 0.67317766, z: -0.21640669, w: 0.67317766}
+  m_LocalPosition: {x: 0.000000008692174, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -691,7 +691,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.01, y: 5.4, z: -47.44}
+  m_LocalPosition: {x: 3.16, y: 5.4, z: -25.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1400,7 +1400,7 @@ Transform:
   m_GameObject: {fileID: 832575517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.01, y: 3.4, z: -44.44}
+  m_LocalPosition: {x: 3.16, y: 3.4, z: -22.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2039,7 +2039,7 @@ Transform:
   m_GameObject: {fileID: 1351248096}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.136013, y: 5.9, z: -43.57965}
+  m_LocalPosition: {x: 0.15999961, y: 5.9, z: -22.21}
   m_LocalScale: {x: 1.7143191, y: 1.7143191, z: 1.7143191}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2078,7 +2078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6c6dcee61830c4ca6e477736d1e733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: Leve_3
+  nextLevel: Leve_5
 --- !u!65 &1396218610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2181,7 +2181,7 @@ Transform:
   m_GameObject: {fileID: 1425814414}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.000000020390058, z: -0.0000000012428814, w: 1}
-  m_LocalPosition: {x: 10.01, y: 5.4, z: -47.44}
+  m_LocalPosition: {x: 3.16, y: 5.4, z: -25.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2239,6 +2239,37 @@ MonoBehaviour:
     score: 0
     moveSpeed: 2
     Hp: 0
+--- !u!1 &1490859323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1490859324}
+  m_Layer: 0
+  m_Name: chr_knight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1490859324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490859323}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.45, y: 4.2, z: -22.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1688885686
 GameObject:
   m_ObjectHideFlags: 3
@@ -2947,6 +2978,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 410087041}
+  - {fileID: 1490859324}
   - {fileID: 1799162196}
   - {fileID: 832575519}
   - {fileID: 1425814416}

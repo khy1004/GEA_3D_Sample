@@ -304,7 +304,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 4179741618614306927}
   lasAttackTime: 0
-  maxHP: 5
+  maxHP: 10
   currentHP: 0
   hpSlider: {fileID: 7030448269974366196}
 --- !u!1 &5820610944627848980
