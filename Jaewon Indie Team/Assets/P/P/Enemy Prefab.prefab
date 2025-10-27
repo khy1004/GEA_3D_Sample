@@ -517,7 +517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  moveSpeed: 2
+  moveSpeed: 4
   traceRange: 15
   attackRange: 6
   attackcooldown: 1.5

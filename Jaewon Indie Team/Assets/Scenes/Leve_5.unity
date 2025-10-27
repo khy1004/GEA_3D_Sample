@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 4175380923089476214, guid: 7a7afe1280d45a7408c66ef7357b8de2, type: 3}
+  - {fileID: 4175380923089476214, guid: b02a6fad1143c604c866cfd4ceeb3b17, type: 3}
   spawnInterval: 3
   SpawnRange: 5
 --- !u!4 &843226938
@@ -1670,9 +1670,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 2691786843842791811, guid: aa7051d96901ce14f990235c19d62221, type: 3}
-  - {fileID: 8630356461246637780, guid: fbbd97ea0fb0ca44d9e2e9d6d25f9b94, type: 3}
-  - {fileID: 2691786843842791811, guid: aa7051d96901ce14f990235c19d62221, type: 3}
+  - {fileID: 2691786843842791811, guid: d1897d1773940c34e8782eb4aaf0827f, type: 3}
+  - {fileID: 2691786843842791811, guid: d1897d1773940c34e8782eb4aaf0827f, type: 3}
+  - {fileID: 2691786843842791811, guid: d1897d1773940c34e8782eb4aaf0827f, type: 3}
   spawnInterval: 3
   SpawnRange: 5
 --- !u!4 &1016583340
@@ -1935,7 +1935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 8630356461246637780, guid: fbbd97ea0fb0ca44d9e2e9d6d25f9b94, type: 3}
+  - {fileID: 8630356461246637780, guid: e08aa5fc9b7f4e04b929a8ffce00f69e, type: 3}
   spawnInterval: 3
   SpawnRange: 5
 --- !u!4 &1355155708
@@ -2169,7 +2169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 4946577029644634333, guid: 4f8c00535f755bb4584ea976609f099e, type: 3}
+  - {fileID: 4946577029644634333, guid: e61c33665bfdce24f981e9cdb2daab8c, type: 3}
   spawnInterval: 3
   SpawnRange: 5
 --- !u!4 &1432027231
