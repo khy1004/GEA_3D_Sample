@@ -393,8 +393,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6695886, y: 1.7940657, z: 1.0614201}
-  m_Center: {x: 0.33479428, y: 0.17377639, z: 0.30997533}
+  m_Size: {x: 1.6695886, y: 1.7535138, z: 1.0614201}
+  m_Center: {x: 0.33479428, y: 2.0267255, z: 0.30997533}
 --- !u!54 &1709557321996356809
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  moveSpeed: 2
+  moveSpeed: 7
   traceRange: 15
   attackRange: 6
   attackcooldown: 1.5

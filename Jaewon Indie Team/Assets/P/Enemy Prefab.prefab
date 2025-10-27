@@ -517,8 +517,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  moveSpeed: 2
-  traceRange: 15
+  moveSpeed: 4
+  traceRange: 20
   attackRange: 6
   attackcooldown: 1.5
   projectilePrefab: {fileID: 8521619781949599332, guid: 9620c7b864189ad4bb95c6c6156d9aae,

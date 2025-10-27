@@ -300,9 +300,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3213564478149771929}
-  - component: {fileID: 5683610131630772946}
   - component: {fileID: 1701045373988353901}
   - component: {fileID: 4724125622048687893}
+  - component: {fileID: 6681535766370775149}
   m_Layer: 0
   m_Name: GameObject (1) 2
   m_TagString: Untagged
@@ -328,29 +328,6 @@ Transform:
   - {fileID: 228798674422921892}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &5683610131630772946
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4946577029644634333}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.9233459
-  m_Height: 1.8466918
-  m_Direction: 1
-  m_Center: {x: -0.36, y: -0.07, z: 1.84}
 --- !u!54 &1701045373988353901
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -391,8 +368,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  moveSpeed: 2
-  traceRange: 15
+  moveSpeed: 3
+  traceRange: 20
   attackRange: 6
   attackcooldown: 1.5
   projectilePrefab: {fileID: 6935265428354645470, guid: 923f390a7a22c7b429328c71010ae04c,
@@ -402,6 +379,27 @@ MonoBehaviour:
   maxHP: 5
   currentHP: 0
   hpSlider: {fileID: 796320586386719376}
+--- !u!65 &6681535766370775149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4946577029644634333}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0190918, y: 0.9111005, z: 0.7273593}
+  m_Center: {x: -0.0095458925, y: 0.30284065, z: 2.191138}
 --- !u!1 &7309486313251554220
 GameObject:
   m_ObjectHideFlags: 0
