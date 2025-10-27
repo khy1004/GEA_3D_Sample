@@ -1276,7 +1276,7 @@ Transform:
   m_GameObject: {fileID: 843226936}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.08, y: 14.86, z: 78.83}
+  m_LocalPosition: {x: 53.69, y: 14.86, z: 78.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1684,7 +1684,7 @@ Transform:
   m_GameObject: {fileID: 1016583338}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.4, y: 14.86, z: 131}
+  m_LocalPosition: {x: 43.4, y: 14.86, z: 121.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1947,7 +1947,7 @@ Transform:
   m_GameObject: {fileID: 1355155706}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.9, y: 14.86, z: 113.4}
+  m_LocalPosition: {x: 24.47, y: 14.86, z: 113.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2181,7 +2181,7 @@ Transform:
   m_GameObject: {fileID: 1432027229}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.08, y: 14.86, z: 115.52}
+  m_LocalPosition: {x: 59, y: 14.86, z: 115.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2752,7 +2752,7 @@ Transform:
   m_GameObject: {fileID: 1698648012}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.73, y: 14.86, z: 78.83}
+  m_LocalPosition: {x: 29.09, y: 14.86, z: 78.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2843,6 +2843,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameObject (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123798884172200161, guid: 766b4fd22e3c991478ed963c261cefb0,
+        type: 3}
+      propertyPath: nextLevel
+      value: en
       objectReference: {fileID: 0}
     - target: {fileID: 8437210610362227231, guid: 766b4fd22e3c991478ed963c261cefb0,
         type: 3}
