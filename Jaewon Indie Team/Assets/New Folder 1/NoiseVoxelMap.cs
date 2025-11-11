@@ -14,6 +14,7 @@ public class NoiseVoxelMap : MonoBehaviour
     [SerializeField] float noiseScale = 20f;
     public int waterLevel = 4;
 
+
     void Start()
     {
         float offsetX = Random.Range(-9999f, 9999f);
@@ -26,7 +27,6 @@ public class NoiseVoxelMap : MonoBehaviour
                 float nx = (x + offsetX) / noiseScale;
                 float nz = (z + offsetZ) / noiseScale;
                 float noise = Mathf.PerlinNoise(nx, nz);
-
                 int h = Mathf.FloorToInt(noise * maxHeight);
 
                 // Èë + Ç® »ý¼º
