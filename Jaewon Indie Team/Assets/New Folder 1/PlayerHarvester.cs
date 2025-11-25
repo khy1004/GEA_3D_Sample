@@ -17,12 +17,14 @@ public class PlayerHarvester : MonoBehaviour
     private Camera _cam;
 
     public Inventory inventory;
+    InventoryUI invenUI;
 
     // Start is called before the first frame update
     void Awake()
     {
         _cam = Camera.main;
         if (inventory == null) inventory = gameObject.AddComponent<Inventory>();
+        invenUI = FindAnyObjectByType<InventoryUI>();
     }
 
     // Update is called once per frame
@@ -43,5 +45,7 @@ public class PlayerHarvester : MonoBehaviour
                 }
             }
         }
+     
     }
+    
 }
