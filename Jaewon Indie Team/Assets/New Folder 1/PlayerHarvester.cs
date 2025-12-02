@@ -17,7 +17,9 @@ public class PlayerHarvester : MonoBehaviour
     private Camera _cam;
 
     public Inventory inventory;
+    
     InventoryUI invenUI;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -45,7 +47,32 @@ public class PlayerHarvester : MonoBehaviour
                 }
             }
         }
+        else
+        { 
+         if (Input.GetMouseButtonDown(0))
+         {
+                Ray ray = _cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+                if (Physics.Raycast(ray, out var hit, rayDistance, hitMask,QueryTriggerInteraction.Ignore))
+                {
+                    Vector3Int placePos = AdjacentCellOnHitFace(hit);
+
+                    BlockType selected = invenUI.GetInventorySlot();
+                    if (inventory.Consume(selected, 1))
+                    {
+                        FindAnyObjectByType<NoiseVoxelMap>().PlaceTile(placePos, selected);
+                    }
+                }
+         }
+        }
+
+          
+
      
     }
-    
+    static Vector3Int AdjacentCellOnHitFace(in RaycastHit hit)
+    {
+        Vector3 baseCenter = hit.collider.transform.position;
+        Vector3 adjCenter = baseCenter + hit.normal;
+        return Vector3Int.RoundToInt(adjCenter);
+    }
 }
