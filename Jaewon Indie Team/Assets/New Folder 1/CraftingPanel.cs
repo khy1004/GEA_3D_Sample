@@ -97,6 +97,7 @@ public class CraftingPanel : MonoBehaviour
         {
             if (inventory.GetCount(plannedItem.Key) < plannedItem.Value)
             {
+                Debug.LogWarning("ㅇㅇ");
                 SetHint($"{plannedItem.Key}가 부족합니다.");
                 return;
             }

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd7d42b226e67f4f89156c9fe874282, type: 3}
   m_Name: Recipe
   m_EditorClassIdentifier: 
-  displayName: Shovel
+  displayName: Axe
   inputs:
   - type: 0
     count: 1
   - type: 1
-    count: 2
+    count: 1
   outputs:
-  - type: 1
+  - type: 5
     count: 1

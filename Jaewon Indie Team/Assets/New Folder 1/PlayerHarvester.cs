@@ -56,33 +56,46 @@ public class PlayerHarvester : MonoBehaviour
         
         {
 
-            Ray rayDebug = _cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            if (Physics.Raycast(rayDebug, out var hitDebug, rayDistance, hitMask, QueryTriggerInteraction.Ignore))
+            switch(invenUI.GetInventorySlot())
             {
-                Vector3Int plaoePos = AdjacentCellOnHitFace(hitDebug);
-                selectedBlock.transform.localScale = Vector3.one;
-                selectedBlock.transform.position = plaoePos;
-                selectedBlock.transform.rotation = Quaternion.identity;
-            }
-            else
-            {
-                selectedBlock.transform.localScale = Vector3.zero;
-            }
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                Ray ray = _cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-                if (Physics.Raycast(ray, out var hit, rayDistance, hitMask, QueryTriggerInteraction.Ignore))
-                {
-                    Vector3Int placePos = AdjacentCellOnHitFace(hit);
-
-                    ItemType selected = invenUI.GetInventorySlot();
-                    if (inventory.Consume(selected, 1))
+                case ItemType.Dirt:
+                case ItemType.Grass:
+                case ItemType.Water:
+                case ItemType.Diamond:
+                    Ray rayDebug = _cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+                    if (Physics.Raycast(rayDebug, out var hitDebug, rayDistance, hitMask, QueryTriggerInteraction.Ignore))
                     {
-                        FindObjectOfType<NoiseVoxelMap>().PlaceTile(placePos, selected);
+                        Vector3Int plaoePos = AdjacentCellOnHitFace(hitDebug);
+                        selectedBlock.transform.localScale = Vector3.one;
+                        selectedBlock.transform.position = plaoePos;
+                        selectedBlock.transform.rotation = Quaternion.identity;
                     }
-                }
+                    else
+                    {
+                        selectedBlock.transform.localScale = Vector3.zero;
+                    }
+
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        Ray ray = _cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+                        if (Physics.Raycast(ray, out var hit, rayDistance, hitMask, QueryTriggerInteraction.Ignore))
+                        {
+                            Vector3Int placePos = AdjacentCellOnHitFace(hit);
+
+                            ItemType selected = invenUI.GetInventorySlot();
+                            if (inventory.Consume(selected, 1))
+                            {
+                                FindObjectOfType<NoiseVoxelMap>().PlaceTile(placePos, selected);
+                            }
+                        }
+                    }
+                    break;
+                case ItemType.Axe:
+                    // 도끼 들었을때 할 행동 
+                    break;
+
             }
+
 
         }
         
