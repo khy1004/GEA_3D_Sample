@@ -34,27 +34,44 @@ public class PlayerHarvester : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetMouseButton(0) && Time.time >= _nextHitTime)
+        if (invenUI.selectedIndex <0)
         {
-            _nextHitTime = Time.time + hitCooldown;
+            selectedBlock.transform.localScale = Vector3.zero;
 
-            Ray ray = _cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            if (Physics.Raycast(ray, out var hit, rayDistance, hitMask))
+            if (Input.GetMouseButton(0) && Time.time >= _nextHitTime)
             {
-                var block = hit.collider.GetComponent<Block>();
-                if (block != null)
+                _nextHitTime = Time.time + hitCooldown;
+
+                Ray ray = _cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+                if (Physics.Raycast(ray, out var hit, rayDistance, hitMask, QueryTriggerInteraction.Ignore))
                 {
-                    block.Hit(toolDamage, inventory);
+                    var block = hit.collider.GetComponent<Block>();
+                    if (block != null)
+                    {
+                        block.Hit(toolDamage, inventory);
+                    }
                 }
+            }
+
+        }
+        else
+        
+        {
+
+            Ray rayDebug = _cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            if (Physics.Raycast(rayDebug, out var hitDebug, rayDistance, hitMask, QueryTriggerInteraction.Ignore))
+            {
+                
             }
         }
         else
-        { 
+        {
+            selectedBlock.transform.localScale = Vector3.zero;
+        }
          if (Input.GetMouseButtonDown(0))
          {
                 Ray ray = _cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-                if (Physics.Raycast(ray, out var hit, rayDistance, hitMask,QueryTriggerInteraction.Ignore))
+                if (Physics.Raycast(ray, out var hit, rayDistance,QueryTriggerInteraction.Ignore)) hitMask,QueryTriggerInteraction.Ignore))
                 {
                     Vector3Int placePos = AdjacentCellOnHitFace(hit);
 
