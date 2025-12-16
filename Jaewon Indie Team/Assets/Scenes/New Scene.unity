@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: 735295502}
   - component: {fileID: 735295505}
   - component: {fileID: 735295506}
-  - component: {fileID: 735295508}
+  - component: {fileID: 735295507}
   m_Layer: 0
   m_Name: 'Player '
   m_TagString: Player
@@ -739,10 +739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bf26e60f8466da4eba77d955eb351fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpPower: 5
-  gravity: -9.81
-  mouseSensitivity: 3
 --- !u!114 &735295506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,7 +751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ad50598e63f1c46a3f23c8345c91fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &735295508
+--- !u!114 &735295507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -773,7 +769,8 @@ MonoBehaviour:
     m_Bits: 4294967295
   toolDamage: 1
   hitCooldown: 0.15
-  inventory: {fileID: 735295506}
+  inventory: {fileID: 0}
+  selectedBlock: {fileID: 0}
 --- !u!1 &772546262
 GameObject:
   m_ObjectHideFlags: 0

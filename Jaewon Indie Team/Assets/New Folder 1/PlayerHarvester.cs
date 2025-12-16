@@ -17,13 +17,12 @@ public class PlayerHarvester : MonoBehaviour
     private Camera _cam;
 
     public Inventory inventory;
-    
+
     InventoryUI invenUI;
 
     public GameObject selectedBlock;
 
 
-    // Start is called before the first frame update
     void Awake()
     {
         _cam = Camera.main;
@@ -31,7 +30,6 @@ public class PlayerHarvester : MonoBehaviour
         invenUI = FindAnyObjectByType<InventoryUI>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (invenUI.selectedIndex <0)
@@ -61,32 +59,34 @@ public class PlayerHarvester : MonoBehaviour
             Ray rayDebug = _cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             if (Physics.Raycast(rayDebug, out var hitDebug, rayDistance, hitMask, QueryTriggerInteraction.Ignore))
             {
-                
+                Vector3Int plaoePos = AdjacentCellOnHitFace(hitDebug);
+                selectedBlock.transform.localScale = Vector3.one;
+                selectedBlock.transform.position = plaoePos;
+                selectedBlock.transform.rotation = Quaternion.identity;
             }
-        }
-        else
-        {
-            selectedBlock.transform.localScale = Vector3.zero;
-        }
-         if (Input.GetMouseButtonDown(0))
-         {
+            else
+            {
+                selectedBlock.transform.localScale = Vector3.zero;
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
                 Ray ray = _cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-                if (Physics.Raycast(ray, out var hit, rayDistance,QueryTriggerInteraction.Ignore)) hitMask,QueryTriggerInteraction.Ignore))
+                if (Physics.Raycast(ray, out var hit, rayDistance, hitMask, QueryTriggerInteraction.Ignore))
                 {
                     Vector3Int placePos = AdjacentCellOnHitFace(hit);
 
                     ItemType selected = invenUI.GetInventorySlot();
                     if (inventory.Consume(selected, 1))
                     {
-                        FindAnyObjectByType<NoiseVoxelMap>().PlaceTile(placePos, selected);
+                        FindObjectOfType<NoiseVoxelMap>().PlaceTile(placePos, selected);
                     }
                 }
-         }
+            }
+
         }
-
-          
-
-     
+        
+            
     }
     static Vector3Int AdjacentCellOnHitFace(in RaycastHit hit)
     {
@@ -95,3 +95,22 @@ public class PlayerHarvester : MonoBehaviour
         return Vector3Int.RoundToInt(adjCenter);
     }
 }
+
+
+
+    
+
+
+    // Update is called once per frame
+    
+                  
+
+
+                
+
+
+
+
+
+
+

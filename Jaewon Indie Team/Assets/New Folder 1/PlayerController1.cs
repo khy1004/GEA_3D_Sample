@@ -35,7 +35,7 @@ public class PlayerController1 : MonoBehaviour
     {
         HandleMove();
         HandleLook();
-        
+
     }
 
     void HandleMove()
@@ -49,14 +49,14 @@ public class PlayerController1 : MonoBehaviour
         controller.Move(move * moveSpeed * Time.deltaTime);
         if (Input.GetButtonDown("Jump") && isGrounded)
             velocity.y = Mathf.Sqrt(jumpPower * -2f * gravity);
-            velocity.y += gravity * Time.deltaTime;
+        velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
 
     void HandleLook()
     {
-       
-         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
         transform.Rotate(Vector3.up * mouseX);
         xRotation -= mouseY;
@@ -68,3 +68,4 @@ public class PlayerController1 : MonoBehaviour
 
 
 }
+
