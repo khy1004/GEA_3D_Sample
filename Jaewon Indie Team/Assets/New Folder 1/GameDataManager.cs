@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Linq;
@@ -41,10 +41,10 @@ public class GameDataManager : MonoBehaviour
 
     public void SaveData()
     {
-        string filepath = Application.persistentDataPath +"/player_data.json";
+        string filepath = Application.persistentDataPath + "/player_data.json";
         string json = JsonUtility.ToJson(playerData, true);
         System.IO.File.WriteAllText(filepath, json);
-        Debug.Log("°ÔÀÓ µ¥ÀÌÅÍ ·ÎµåµÊ: " + json);
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½: " + json);
     }
     public PlayerData LoadData()
     {
@@ -53,14 +53,14 @@ public class GameDataManager : MonoBehaviour
         {
             string json = System.IO.File.ReadAllText(filePath);
             PlayerData playerData = JsonUtility.FromJson<PlayerData>(json);
-            Debug.Log("°ÔÀÓ µ¥ÀÌÅÍ ·ÎµåµÊ: " + json);
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½: " + json);
             return playerData;
         }
-        else 
+        else
         {
-            Debug.LogWarning("ÀúÀåµÈ °ÔÀÓ µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+            Debug.LogWarning("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
             return new PlayerData();
-        
+
         }
     }
     public void GameStart()
@@ -99,12 +99,12 @@ public class GameDataManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
