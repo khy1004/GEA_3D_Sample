@@ -11,6 +11,8 @@ public class InventoryUI : MonoBehaviour
     public Sprite waterSprite;
     public Sprite cloudSprite;
     public Sprite axeSprite;
+    public Sprite lronSprite;
+    public Sprite StoneSprite;
 
     public List<Transform> Slot = new List<Transform>();
     public GameObject slotItem;
@@ -50,6 +52,12 @@ public class InventoryUI : MonoBehaviour
                     break;
                 case ItemType.Axe:
                     sItem.ItemSetting(axeSprite, "x" + item.Value.ToString(), item.Key);
+                    break;
+                case ItemType.lron:
+                    sItem.ItemSetting(lronSprite, "x" + item.Value.ToString(), item.Key);
+                    break;
+                case ItemType.Stone:
+                    sItem.ItemSetting(StoneSprite, "x" + item.Value.ToString(), item.Key);
                     break;
 
             }

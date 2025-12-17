@@ -8,6 +8,8 @@ public class NoiseVoxelMap : MonoBehaviour
     public GameObject blockPrefabGrass;
     public GameObject blockPrefabWater;
     public GameObject blockPrefabDiamond;
+    public GameObject blockPrefabStone;
+    public GameObject blockPrefabclron;
 
     public int width = 20;
     public int depth = 20;
@@ -34,13 +36,29 @@ public class NoiseVoxelMap : MonoBehaviour
                 {
                     if (y == h)
                         PlaceGrass(x, y, z);
-                    else
+                   else if (y >= h - 3)
+                    
+                   {
                         PlaceDirt(x, y, z);
+                   }
+                    else
+                    {
+                        if (Random.value < 0.2f)
+                        {
+                            Placelron(x, y, z);
+                        }
+                        
+                        else
+                        {
+                           PlaceStone(x, y, z);
+                        }
+                    }
                 }
-                for(int y = h + 1; y <= waterLevel; y++)
-                {
-                    PlaceWater(x, y, z);
-                }
+                
+                    for (int y = h + 1; y <= waterLevel; y++)
+                    {
+                        PlaceWater(x, y, z);
+                    }
 
          
                 
@@ -69,6 +87,17 @@ public class NoiseVoxelMap : MonoBehaviour
         var go = Instantiate(blockPrefabDiamond, new Vector3(x, y, z), Quaternion.identity, transform);
         go.name = $"Water_{x}_{y}_{z}";
     }
+    private void Placelron(int x, int y, int z)
+    {
+        var go = Instantiate(blockPrefabclron, new Vector3(x, y, z), Quaternion.identity, transform);
+        go.name = $"Water_{x}_{y}_{z}";
+    }
+    private void PlaceStone(int x, int y, int z)
+    {
+        var go = Instantiate(blockPrefabStone, new Vector3(x, y, z), Quaternion.identity, transform);
+        go.name = $"Water_{x}_{y}_{z}";
+    }
+
 
 
 
@@ -88,6 +117,12 @@ public class NoiseVoxelMap : MonoBehaviour
             case ItemType.Diamond:
                 PlaceDiamond(pos.x, pos.y, pos.z);
             break;
+            case ItemType.lron:
+                Placelron(pos.x, pos.y, pos.z);
+                break;
+            case ItemType.Stone:
+                PlaceStone(pos.x, pos.y, pos.z);
+                break;
         }
     }
 }
