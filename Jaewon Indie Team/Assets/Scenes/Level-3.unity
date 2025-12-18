@@ -1948,17 +1948,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfaedc0aec0fe324394da2abc24847c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockPrefabDirt: {fileID: 1101085466378797176, guid: af980795ea0cc8d48b8d6033fb50634a,
+  blockPrefabDirt: {fileID: 8795220705397181661, guid: bdeb0476583997a4ba4505f257f7fcaf,
     type: 3}
-  blockPrefabGrass: {fileID: 7709741517573463684, guid: 7f2b24bc3e5b62f439e312a315df036c,
+  blockPrefabGrass: {fileID: 3800673881763884104, guid: f2aa530770eceb44e9edc24d852af344,
     type: 3}
   blockPrefabWater: {fileID: 8324218453141461017, guid: c01f31696af48d44a8e45ea0bfcabb9a,
     type: 3}
-  blockPrefabDiamond: {fileID: 5260494846844880844, guid: ce96f262546da3e4ebd605f7523b1230,
+  blockPrefabDiamond: {fileID: 6122180309159135234, guid: ffc1026b4fe662e408323603a44c1811,
     type: 3}
-  blockPrefabStone: {fileID: 5260494846844880844, guid: ce96f262546da3e4ebd605f7523b1230,
+  blockPrefabStone: {fileID: 6122180309159135234, guid: ffc1026b4fe662e408323603a44c1811,
     type: 3}
-  blockPrefabclron: {fileID: 5641818406139752521, guid: e4151afb02c167f4f9d204fbdcbb95a4,
+  blockPrefabclron: {fileID: 624502174176494051, guid: 2394269164b7eb34186216c008bfb6ce,
     type: 3}
   width: 32
   depth: 32
@@ -2931,21 +2931,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 1-14
-      objectReference: {fileID: 0}
-    - target: {fileID: 2246473207495084997, guid: b5406298cb7532049b2ad485f5abf211,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 2246473207495084997, guid: b5406298cb7532049b2ad485f5abf211,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 11.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 4467675760099935567, guid: b5406298cb7532049b2ad485f5abf211,
-        type: 3}
-      propertyPath: nextLevel
-      value: Level-3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
