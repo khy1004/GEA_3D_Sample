@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfd7d42b226e67f4f89156c9fe874282, type: 3}
-  m_Name: Recipe
+  m_Name: Recipe 2
   m_EditorClassIdentifier: 
-  displayName: Axe
+  displayName: key
   inputs:
-  - type: 6
+  - type: 1
     count: 3
   - type: 7
-    count: 2
-  outputs:
-  - type: 5
-    count: 1
+    count: 3
+  outputs: []

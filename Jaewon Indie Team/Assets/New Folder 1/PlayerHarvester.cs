@@ -91,6 +91,8 @@ public class PlayerHarvester : MonoBehaviour
                     }
                     break;
                 case ItemType.Axe:
+                case ItemType.shovel:
+                case ItemType.key:
                     // 도끼 들었을때 할 행동 
                     break;
 
