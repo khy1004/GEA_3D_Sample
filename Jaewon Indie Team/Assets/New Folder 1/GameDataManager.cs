@@ -69,11 +69,11 @@ public class GameDataManager : MonoBehaviour
         if (playerData == null)
         {
             playerData = new PlayerData();
-            SceneManager.LoadScene("Leve_1");
+            SceneManager.LoadScene("Level-1");
         }
         else
         {
-            SceneManager.LoadScene("Leve_" + playerData.stage);
+            SceneManager.LoadScene("Level-" + playerData.stage);
         }
     }
 
